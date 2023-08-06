@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPO Commune - Invest in IPOs</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to IPO Commune</h1>
+        <p>Empowering Investors for IPO Success</p>
+    </header>
+
+    <section id="invest-form">
+        <h2>Invest in IPO</h2>
+        <form action="/submit_investment" method="POST" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br>
+
+            <label for="ipo">Select IPO:</label>
+            <select id="ipo" name="ipo" required>
+                <option value="" disabled selected>Select an IPO</option>
+                <option value="ipo1">IPO 1</option>
+                <option value="ipo2">IPO 2</option>
+                <option value="ipo3">IPO 3</option>
+                <!-- Add more IPO options as needed -->
+            </select><br>
+
+            <label for="amount">Amount to Invest (INR):</label>
+            <input type="number" id="amount" name="amount" required><br>
+
+            <label for="upi">UPI ID:</label>
+            <input type="text" id="upi" name="upi" required><br>
+
+            <label for="proof">Proof of Payment (Upload):</label>
+            <input type="file" id="proof" name="proof" accept=".jpg, .jpeg, .png" required><br>
+
+            <input type="submit" value="Submit Investment">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 IPO Commune. All rights reserved.</p>
+    </footer>
+</body>
+</html>
